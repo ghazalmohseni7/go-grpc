@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hello_grpc;
+
+option go_package = "./grpchellopbs";
+message NameRequest{
+  string Name=1;
+}
+
+message AnswerRequest{
+  string Answer=1;
+}
+service HelloFunction{
+  rpc SayHello(NameRequest) returns (AnswerRequest);
+}
+
+اث
